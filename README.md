@@ -12,7 +12,7 @@ Before completing your configuration, reset steam cloud to remove any residual c
 1. Select "Local Save" and then click "Continue"
 
 ## Autoexec location
-Copy `autoexec.cfg` to either of the following directories:
+Download `autoexec.cfg`, modify values to your preference, then copy it to either of the following directories:
 
 - `<steamlibrary>\steamapps\common\Counter-Strike Global Offensive\game\core\cfg`
 - `<steamlibrary>\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg`
@@ -39,3 +39,25 @@ Starting from the "low" preset:
 | High Dynamic Range               | Performance                |
 | FidelityFX Super Resolution      | Disabled (Highest Quality) |
 | NVIDIA Reflex Low Latency        | Enabled                    |
+
+## NVIDIA Profile Inspector ([website](https://nvidiaprofileinspector.com))
+Editing "Counter-strike 2" profile, starting from default settings:
+
+| Setting                          | Value                      |
+|----------------------------------|----------------------------|
+| Maximum Pre-Rendered Frames      | 1                          |
+| Ultra Low Latency - CPL State    | Ultra                      |
+| Ultra Low Latency - Enabled      | On                         |
+| Vertical Sync                    | Force off                  |
+| Anisotropic Filter - Sample Optimization | On                 |
+| Texture Filtering - Quality      | High performance           |
+| Texture Filtering - Trilinear Optimization | On               |
+| Ansel - Enabled                  | Off                        |
+| CUDA - Force P2 State            | Off                        |
+| Power Management - Mode          | Prefer maximum performance |
+| rBAR - Feature                   | Enabled                    |
+| rBAR - Options                   | `0x00000001` (Battlefield V, ...) |
+| rBAR - Size Limit                | `0x0000000040000000` (Battlefield V, ...) |
+| Shadercache - Cachesize          | Unlimited                  |
+| Threaded Optimization            | Off                        |
+| Memory Allocation Polic          | `0x00000001` (...MODERATE_PRE_ALLOCATION) |
