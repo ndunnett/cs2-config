@@ -27,7 +27,7 @@ Starting from the "low" preset:
 
 | Setting                          | Value                      |
 |----------------------------------|----------------------------|
-| Boost Player Contrast            | Enabled                   |
+| Boost Player Contrast            | Enabled                    |
 | Wait for Vertical Sync           | Disabled                   |
 | Multisampling Anti-Aliasing Mode | 2X MSAA                    |
 | Global Shadow Quality            | High                       |
@@ -41,7 +41,7 @@ Starting from the "low" preset:
 | NVIDIA Reflex Low Latency        | Enabled                    |
 
 ## NVIDIA Profile Inspector ([website](https://nvidiaprofileinspector.com))
-Editing "Counter-strike 2" profile, starting from default settings:
+Editing the "Counter-strike 2" profile, starting from default settings:
 
 | Setting                          | Value                      |
 |----------------------------------|----------------------------|
@@ -60,4 +60,6 @@ Editing "Counter-strike 2" profile, starting from default settings:
 | rBAR - Size Limit                | `0x0000000040000000` (Battlefield V, ...) |
 | Shadercache - Cachesize          | Unlimited                  |
 | Threaded Optimization            | Off                        |
-| Memory Allocation Polic          | `0x00000001` (...MODERATE_PRE_ALLOCATION) |
+| Memory Allocation Policy         | `0x00000001` (...MODERATE_PRE_ALLOCATION) |
+
+Don't forget to click "Apply changes".
