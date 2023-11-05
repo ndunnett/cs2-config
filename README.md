@@ -3,12 +3,12 @@
 `<steamlibrary>\steamapps\common\Counter-Strike Global Offensive\game\core\cfg`
 
 ## Launch options
-`-high`
+No launch options set
 
 ## In-game video settings
 | Setting                          | Value                      |
 |----------------------------------|----------------------------|
-| Boost Player Contrast            | Disabled                   |
+| Boost Player Contrast            | Enabled                   |
 | Wait for Vertical Sync           | Disabled                   |
 | Multisampling Anti-Aliasing Mode | 2X MSAA                    |
 | Global Shadow Quality            | High                       |
