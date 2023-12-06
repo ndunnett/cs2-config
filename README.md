@@ -1,4 +1,10 @@
 # cs2-config
+## My hardware
+- CPU: AMD Ryzen 7 7800X3D
+- Motherboard: ASUS ROG Strix X670E-I
+- Memory: Corsair Vengeance 6000MHz CL30 DDR5 2x16GB
+- GPU: NVIDIA RTX 3070 Ti Founders Edition
+
 ## Reset steam cloud configuration
 Before completing your configuration, reset steam cloud to remove any residual configuration from CS:GO/CS2 being automatically applied and reset everything to complete default.
 
@@ -20,25 +26,27 @@ Download `autoexec.cfg`, modify values to your preference, then copy it to eithe
 If you don't know the location of your steam library, it is installed to `C:\Program Files (x86)\Steam` by default.
 
 ## Launch options
-No launch options set.
+`-threads 8`
 
 ## In-game video settings
 Starting from the "low" preset:
 
 | Setting                          | Value                      |
 |----------------------------------|----------------------------|
-| Boost Player Contrast            | Enabled                    |
+| Boost Player Contrast            | Disabled                   |
 | Wait for Vertical Sync           | Disabled                   |
-| Multisampling Anti-Aliasing Mode | 2X MSAA                    |
+| Multisampling Anti-Aliasing Mode | 4X MSAA                    |
 | Global Shadow Quality            | High                       |
 | Model / Texture Detail           | Low                        |
 | Texture Filtering Mode           | Bilinear                   |
 | Shader Detail                    | Low                        |
 | Particle Detail                  | Low                        |
 | Ambient Occlusion                | Disabled                   |
-| High Dynamic Range               | Performance                |
+| High Dynamic Range               | Quality                    |
 | FidelityFX Super Resolution      | Disabled (Highest Quality) |
 | NVIDIA Reflex Low Latency        | Enabled                    |
+
+Resolution: 1440x1080 (stretched)
 
 ## NVIDIA Profile Inspector ([website](https://nvidiaprofileinspector.com))
 Editing the "Counter-strike 2" profile, starting from default settings:
