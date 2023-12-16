@@ -26,9 +26,11 @@ Download `autoexec.cfg`, modify values to your preference, then copy it to eithe
 If you don't know the location of your steam library, it is installed to `C:\Program Files (x86)\Steam` by default.
 
 ## Launch options
-`-threads 8`
+`-threads 8 -high`
 
 ## In-game video settings
+Resolution: 1280x960 (stretched)
+
 Starting from the "low" preset:
 
 | Setting                          | Value                      |
@@ -36,8 +38,8 @@ Starting from the "low" preset:
 | Boost Player Contrast            | Disabled                   |
 | Wait for Vertical Sync           | Disabled                   |
 | Multisampling Anti-Aliasing Mode | 4X MSAA                    |
-| Global Shadow Quality            | High                       |
-| Model / Texture Detail           | Low                        |
+| Global Shadow Quality            | Low                        |
+| Model / Texture Detail           | Medium                     |
 | Texture Filtering Mode           | Bilinear                   |
 | Shader Detail                    | Low                        |
 | Particle Detail                  | Low                        |
@@ -46,7 +48,23 @@ Starting from the "low" preset:
 | FidelityFX Super Resolution      | Disabled (Highest Quality) |
 | NVIDIA Reflex Low Latency        | Enabled                    |
 
-Resolution: 1440x1080 (stretched)
+## Shadow distance
+To get shadows to render at distance when set to low, open your `cs2_video.txt` file in `C:\Program Files (x86)\Steam\userdata\<account>\730\local\cfg` and find the following lines:
+
+```
+	"setting.csm_viewmodel_shadows"		"0"
+	"setting.csm_max_shadow_dist_override"		"240"
+```
+
+Change them to:
+
+```
+	"setting.csm_viewmodel_shadows"		"1"
+	"setting.csm_max_shadow_dist_override"		"720"
+```
+
+> [!WARNING]  
+> Changing any video settings in game will reset these values.
 
 ## NVIDIA Profile Inspector ([website](https://nvidiaprofileinspector.com))
 Editing the "Counter-strike 2" profile, starting from default settings:
