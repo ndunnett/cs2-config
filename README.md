@@ -66,6 +66,14 @@ Change them to:
 > [!WARNING]  
 > Changing any video settings in game will reset these values.
 
+## NVIDIA Image Sharpening
+Download `nvcpl_sharpening.reg` and merge it. This unlocks a setting in NVIDIA Control Panel 3D settings to enable the old sharpening filter through drivers.
+
+| Setting                          | Value                      |
+|----------------------------------|----------------------------|
+| Sharpen                          | 0.50                       |
+| Ignore film grain                | 0.17                       |
+
 ## NVIDIA Profile Inspector ([website](https://nvidiaprofileinspector.com))
 Editing the "Counter-strike 2" profile, starting from default settings:
 
