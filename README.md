@@ -18,7 +18,7 @@ Before completing your configuration, reset steam cloud to remove any residual c
 1. Select "Local Save" and then click "Continue"
 
 ## Autoexec location
-Download `autoexec.cfg`, modify values to your preference, then copy it to either of the following directories:
+Download [autoexec.cfg](/autoexec.cfg), modify values to your preference, then copy it to either of the following directories:
 
 - `<steamlibrary>\steamapps\common\Counter-Strike Global Offensive\game\core\cfg`
 - `<steamlibrary>\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg`
@@ -63,16 +63,28 @@ Change them to:
 	"setting.csm_max_shadow_dist_override"		"720"
 ```
 
-> [!WARNING]  
+> [!WARNING]
 > Changing any video settings in game will reset these values.
 
 ## NVIDIA Image Sharpening
-Download `nvcpl_sharpening.reg` and merge it. This unlocks a setting in NVIDIA Control Panel 3D settings to enable the old sharpening filter through drivers.
+This registry change replaces the "Image Scaling" setting in NVIDIA Control Panel 3D settings with "Image Sharpening" which applies the legacy sharpening filter that was available in old drivers with little to no performace cost. This removes blurriness and make textures look more crisp, click on the images in the table below for comparison screenshots.
 
-| Setting                          | Value                      |
+| Sharpening Off           |  Sharpening On          |
+|:------------------------:|:-----------------------:|
+| ![](/sharpening_off.png) | ![](/sharpening_on.png) |
+
+1. Download [nvcpl_sharpening.reg](/nvcpl_sharpening.reg) and merge it
+1. Open NVIDIA Control Panel and go to "Manage 3D settings"
+1. Select the "Program Settings" tab and choose the CS2 profile (add it if it isn't already there)
+1. Click on the value for "Image Sharpening", select "On" and leave the values at default (see table below), click "OK", then click "Apply"
+
+| Setting                          | Default Value              |
 |----------------------------------|----------------------------|
 | Sharpen                          | 0.50                       |
 | Ignore film grain                | 0.17                       |
+
+> [!NOTE]
+> If you have CS2 open you will need to restart it for this change to apply.
 
 ## NVIDIA Profile Inspector ([website](https://nvidiaprofileinspector.com))
 Editing the "Counter-strike 2" profile, starting from default settings:
