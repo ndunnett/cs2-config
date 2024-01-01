@@ -67,7 +67,7 @@ Change them to:
 > Changing any video settings in game will reset these values.
 
 ## NVIDIA Image Sharpening
-This registry change replaces the "Image Scaling" setting in NVIDIA Control Panel 3D settings with "Image Sharpening" which applies the legacy sharpening filter that was available in old drivers with little to no performace cost. This removes blurriness and make textures look more crisp, click on the images in the table below for comparison screenshots.
+This registry change replaces the "Image Scaling" setting in NVIDIA Control Panel 3D settings with "Image Sharpening" which applies the legacy sharpening filter that was available in old drivers with little to no performace cost. This removes blurriness and makes textures look more crisp, click on the images in the table below for comparison screenshots.
 
 | Sharpening Off           |  Sharpening On          |
 |:------------------------:|:-----------------------:|
