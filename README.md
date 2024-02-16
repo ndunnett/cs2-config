@@ -3,7 +3,8 @@
 - CPU: AMD Ryzen 7 7800X3D
 - Motherboard: ASUS ROG Strix X670E-I
 - Memory: Corsair Vengeance 6000MHz CL30 DDR5 2x16GB
-- GPU: NVIDIA RTX 3070 Ti Founders Edition
+- GPU: ASUS TUF RTX 4080 SUPER OC Edition
+- NVIDIA Driver: 551.52 DCH (installed using [NVCleanstall](https://www.techpowerup.com/nvcleanstall/))
 
 ## Reset steam cloud configuration
 Before completing your configuration, reset steam cloud to remove any residual configuration from CS:GO/CS2 being automatically applied and reset everything to complete default.
@@ -43,7 +44,7 @@ Starting from the "low" preset:
 | Texture Filtering Mode           | Bilinear                   |
 | Shader Detail                    | Low                        |
 | Particle Detail                  | Low                        |
-| Ambient Occlusion                | Disabled                   |
+| Ambient Occlusion                | Medium                     |
 | High Dynamic Range               | Quality                    |
 | FidelityFX Super Resolution      | Disabled (Highest Quality) |
 | NVIDIA Reflex Low Latency        | Enabled                    |
@@ -74,14 +75,7 @@ This registry change replaces the "Image Scaling" setting in NVIDIA Control Pane
 | ![](/sharpening_off.png) | ![](/sharpening_on.png) |
 
 1. Download [nvcpl_sharpening.reg](/nvcpl_sharpening.reg) and merge it
-1. Open NVIDIA Control Panel and go to "Manage 3D settings"
-1. Select the "Program Settings" tab and choose the CS2 profile (add it if it isn't already there)
-1. Click on the value for "Image Sharpening", select "On" and leave the values at default (see table below), click "OK", then click "Apply"
-
-| Setting                          | Default Value              |
-|----------------------------------|----------------------------|
-| Sharpen                          | 0.50                       |
-| Ignore film grain                | 0.17                       |
+1. Enable it in NVIDIA Control Panel under "Image Sharpening" in "Manage 3D settings" or by applying the values through NVIDIA Profile Inspector in the next section of this page
 
 > [!NOTE]
 > If you have CS2 open you will need to restart it for this change to apply.
@@ -91,6 +85,7 @@ Editing the "Counter-strike 2" profile, starting from default settings:
 
 | Setting                          | Value                      |
 |----------------------------------|----------------------------|
+| Frame Rate Limiter V3            | 600 FPS                    |
 | Maximum Pre-Rendered Frames      | 1                          |
 | Ultra Low Latency - CPL State    | Ultra                      |
 | Ultra Low Latency - Enabled      | On                         |
@@ -102,10 +97,14 @@ Editing the "Counter-strike 2" profile, starting from default settings:
 | CUDA - Force P2 State            | Off                        |
 | Power Management - Mode          | Prefer maximum performance |
 | rBAR - Feature                   | Enabled                    |
-| rBAR - Options                   | `0x00000001` (Battlefield V, ...) |
-| rBAR - Size Limit                | `0x0000000040000000` (Battlefield V, ...) |
+| rBAR - Options                   | `0x00000001`               |
+| rBAR - Size Limit                | `0x0000000040000000`       |
 | Shadercache - Cachesize          | Unlimited                  |
 | Threaded Optimization            | Off                        |
 | Memory Allocation Policy         | `0x00000001` (...MODERATE_PRE_ALLOCATION) |
+| `0x002ED8CD` (Image Sharpening - sharpen) | `0x00000032`      |
+| `0x002ED8CD` (Image Sharpening - ignore film grain) | `0x00000011` |
+| `0x00598928` (Image Sharpening - enabled) | `0x00000001`      |
+| `0x00598949` (Image Sharpening - enabled) | `0x0000000F`      |
 
 Don't forget to click "Apply changes".
