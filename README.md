@@ -108,7 +108,7 @@ Editing the "Counter-strike 2" profile, starting from default settings:
 | Memory Allocation Policy         | `0x00000001` (...MODERATE_PRE_ALLOCATION) |
 | <div align="center">**Unknown**</div> |                       |
 | `0x002ED8CD` (Image Sharpening - sharpen) | `0x00000032`      |
-| `0x002ED8CD` (Image Sharpening - ignore film grain) | `0x00000011` |
+| `0x002ED8CE` (Image Sharpening - ignore film grain) | `0x00000011` |
 | `0x00598928` (Image Sharpening - enabled) | `0x00000001`      |
 | `0x00598949` (Image Sharpening - enabled) | `0x0000000F`      |
 
