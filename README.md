@@ -55,6 +55,8 @@ To get shadows to render at distance when set to low, open your `cs2_video.txt` 
 ```
 	"setting.csm_viewmodel_shadows"		"0"
 	"setting.csm_max_shadow_dist_override"		"240"
+	"setting.lb_barnlight_shadowmap_scale"		"0.250000"
+	"setting.lb_enable_shadow_casting"		"0"
 ```
 
 Change them to:
@@ -62,6 +64,8 @@ Change them to:
 ```
 	"setting.csm_viewmodel_shadows"		"1"
 	"setting.csm_max_shadow_dist_override"		"720"
+	"setting.lb_barnlight_shadowmap_scale"		"0.400000"
+	"setting.lb_enable_shadow_casting"		"1"
 ```
 
 > [!WARNING]
