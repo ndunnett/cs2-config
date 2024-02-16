@@ -30,7 +30,7 @@ If you don't know the location of your steam library, it is installed to `C:\Pro
 `-threads 8 -high`
 
 ## In-game video settings
-Resolution: 1280x960 (stretched)
+Resolution: 1440x1080 (stretched)
 
 Starting from the "low" preset:
 
@@ -50,7 +50,12 @@ Starting from the "low" preset:
 | NVIDIA Reflex Low Latency        | Enabled                    |
 
 ## Shadow distance
-To get shadows to render at distance when set to low, open your `cs2_video.txt` file in `C:\Program Files (x86)\Steam\userdata\<account>\730\local\cfg` and find the following lines:
+To get shadows to render at distance when set to low, download [update_cs2_video.ps1](/update_cs2_video.ps1), right click it and run with PowerShell. This will automatically change the parameters in `cs2_video.txt` to make shadows render properly at low quality.
+
+> [!NOTE]
+> You may have difficulty running this script due to [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4). You can use a shortcut to bypass execution policy by placing `update_cs2_video.ps1` in C drive and creating a shortcut with a location of `powershell.exe -ep Bypass C:\update_cs2_video.ps1`.
+
+To set these parameters manually, open your `cs2_video.txt` file in `C:\Program Files (x86)\Steam\userdata\<account>\730\local\cfg` and find the following lines:
 
 ```
 	"setting.csm_viewmodel_shadows"		"0"
@@ -69,7 +74,7 @@ Change them to:
 ```
 
 > [!WARNING]
-> Changing any video settings in game will reset these values.
+> Changing any video settings in game will overwrite these parameters.
 
 ## NVIDIA Image Sharpening
 This registry change replaces the "Image Scaling" setting in NVIDIA Control Panel 3D settings with "Image Sharpening" which applies the legacy sharpening filter that was available in old drivers with little to no performace cost. This removes blurriness and makes textures look more crisp, click on the images in the table below for comparison screenshots.
