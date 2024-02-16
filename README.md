@@ -85,14 +85,17 @@ Editing the "Counter-strike 2" profile, starting from default settings:
 
 | Setting                          | Value                      |
 |----------------------------------|----------------------------|
+| <div align="center">**2 - Sync and Refresh**</div> |          |
 | Frame Rate Limiter V3            | 600 FPS                    |
 | Maximum Pre-Rendered Frames      | 1                          |
 | Ultra Low Latency - CPL State    | Ultra                      |
 | Ultra Low Latency - Enabled      | On                         |
 | Vertical Sync                    | Force off                  |
+| <div align="center">**4 - Texture Filtering**</div> |         |
 | Anisotropic Filter - Sample Optimization | On                 |
 | Texture Filtering - Quality      | High performance           |
 | Texture Filtering - Trilinear Optimization | On               |
+| <div align="center">**5 - Common**</div> |                    |
 | Ansel - Enabled                  | Off                        |
 | CUDA - Force P2 State            | Off                        |
 | Power Management - Mode          | Prefer maximum performance |
@@ -101,7 +104,9 @@ Editing the "Counter-strike 2" profile, starting from default settings:
 | rBAR - Size Limit                | `0x0000000040000000`       |
 | Shadercache - Cachesize          | Unlimited                  |
 | Threaded Optimization            | Off                        |
+| <div align="center">**Other**</div> |                         |
 | Memory Allocation Policy         | `0x00000001` (...MODERATE_PRE_ALLOCATION) |
+| <div align="center">**Unknown**</div> |                       |
 | `0x002ED8CD` (Image Sharpening - sharpen) | `0x00000032`      |
 | `0x002ED8CD` (Image Sharpening - ignore film grain) | `0x00000011` |
 | `0x00598928` (Image Sharpening - enabled) | `0x00000001`      |
