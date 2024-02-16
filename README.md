@@ -81,6 +81,8 @@ This registry change replaces the "Image Scaling" setting in NVIDIA Control Pane
 > If you have CS2 open you will need to restart it for this change to apply.
 
 ## NVIDIA Profile Inspector ([website](https://nvidiaprofileinspector.com))
+Profile Inspector is an alternative to the "Manage 3D Settings" page in NVIDIA Control Panel for changing game profile settings. Once set, you can export/import profiles to make configuration from a clean install quicker and easier.
+
 Editing the "Counter-strike 2" profile, starting from default settings:
 
 | Setting                          | Value                      |
