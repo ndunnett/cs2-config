@@ -21,15 +21,13 @@ if (-not (Test-Path -Path $userdata -PathType Container)) {
         $content = Get-Content -Path $file.FullName
 
         $parameters.GetEnumerator().foreach({
-            foreach ($line in $content) {
-                if ($line -match "$($_.Key)") {
-                    if ($line -match "`"$($_.Key)`"\s+`"$($_.Value)`"") {
-                        Write-Host " - Already set: $($_.Key) = $($_.Value)"
-                    } else {
-                        Write-Host " - Changed: $($_.Key) = $($_.Value)"
-                        $line = $line -replace "`"(.*)`"(\s+)`"(.*)`"", "`"`$1`"`$2`"$($_.Value)`""
-                    }
-                }
+            $new = $content -replace "`"($($_.Key))`"(\s+)`"(.*)`"", "`"`$1`"`$2`"$($_.Value)`""
+
+            if ("$new" -eq "$content") {
+                Write-Host " - Already set: $($_.Key) = $($_.Value)"
+            } else {
+                Write-Host " - Changed: $($_.Key) = $($_.Value)"
+                $content = $new
             }
         })
 
