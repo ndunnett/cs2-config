@@ -4,7 +4,7 @@
 - Motherboard: ASUS ROG Strix X670E-I
 - Memory: Corsair Vengeance 6000MHz CL30 DDR5 2x16GB
 - GPU: ASUS TUF RTX 4080 SUPER OC Edition
-- NVIDIA Driver: 551.52 DCH (installed using [NVCleanstall](https://www.techpowerup.com/nvcleanstall/))
+- NVIDIA Driver: 560.81 DCH (installed using [NVCleanstall](https://www.techpowerup.com/nvcleanstall/))
 
 ## Reset steam cloud configuration
 Before completing your configuration, reset steam cloud to remove any residual configuration from CS:GO/CS2 being automatically applied and reset everything to complete default.
@@ -37,44 +37,22 @@ Starting from the "low" preset:
 | Setting                          | Value                      |
 |----------------------------------|----------------------------|
 | Boost Player Contrast            | Disabled                   |
-| Wait for Vertical Sync           | Disabled                   |
-| Multisampling Anti-Aliasing Mode | 4X MSAA                    |
-| Global Shadow Quality            | Low                        |
+| V-Sync                           | Enabled                    |
+| NVIDIA G-Sync                    | Enabled                    |
+| NVIDIA Reflex Low Latency        | Enabled                    |
+| Multisampling Anti-Aliasing Mode | 2X MSAA                    |
+| Global Shadow Quality            | Medium                     |
+| Dynamic Shadows                  | Sun only                   |
 | Model / Texture Detail           | Medium                     |
 | Texture Filtering Mode           | Bilinear                   |
 | Shader Detail                    | Low                        |
 | Particle Detail                  | Low                        |
-| Ambient Occlusion                | Medium                     |
+| Ambient Occlusion                | Disabled                   |
 | High Dynamic Range               | Quality                    |
 | FidelityFX Super Resolution      | Disabled (Highest Quality) |
-| NVIDIA Reflex Low Latency        | Enabled                    |
 
 ## Shadow distance
-To get shadows to render at distance when set to low, download [update_cs2_video.ps1](/update_cs2_video.ps1), right click it and run with PowerShell. This will automatically change the parameters in `cs2_video.txt` to make shadows render properly at low quality.
-
-> [!NOTE]
-> You may have difficulty running this script due to [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4). You can use a shortcut to bypass execution policy by placing `update_cs2_video.ps1` in C drive and creating a shortcut with a location of `powershell.exe -ep Bypass C:\update_cs2_video.ps1`.
-
-To set these parameters manually, open your `cs2_video.txt` file in `C:\Program Files (x86)\Steam\userdata\<account>\730\local\cfg` and find the following lines:
-
-```
-	"setting.csm_viewmodel_shadows"		"0"
-	"setting.csm_max_shadow_dist_override"		"240"
-	"setting.lb_barnlight_shadowmap_scale"		"0.250000"
-	"setting.lb_enable_shadow_casting"		"0"
-```
-
-Change them to:
-
-```
-	"setting.csm_viewmodel_shadows"		"1"
-	"setting.csm_max_shadow_dist_override"		"720"
-	"setting.lb_barnlight_shadowmap_scale"		"0.400000"
-	"setting.lb_enable_shadow_casting"		"1"
-```
-
-> [!WARNING]
-> Changing any video settings in game will overwrite these parameters.
+The method to change shadow rendering by modifying `cs2_video.txt` no longer works.
 
 ## NVIDIA Image Sharpening
 This registry change replaces the "Image Scaling" setting in NVIDIA Control Panel 3D settings with "Image Sharpening" which applies the legacy sharpening filter that was available in old drivers with little to no performace cost. This removes blurriness and makes textures look more crisp, click on the images in the table below for comparison screenshots.
@@ -101,11 +79,9 @@ Editing the "Counter-strike 2" profile, starting from default settings:
 | Maximum Pre-Rendered Frames      | 1                          |
 | Ultra Low Latency - CPL State    | Ultra                      |
 | Ultra Low Latency - Enabled      | On                         |
-| Vertical Sync                    | Force off                  |
 | <div align="center">**4 - Texture Filtering**</div> |         |
 | Anisotropic Filter - Sample Optimization | On                 |
 | Texture Filtering - Quality      | High performance           |
-| Texture Filtering - Trilinear Optimization | On               |
 | <div align="center">**5 - Common**</div> |                    |
 | Ansel - Enabled                  | Off                        |
 | CUDA - Force P2 State            | Off                        |
@@ -114,7 +90,6 @@ Editing the "Counter-strike 2" profile, starting from default settings:
 | rBAR - Options                   | `0x00000001`               |
 | rBAR - Size Limit                | `0x0000000040000000`       |
 | Shadercache - Cachesize          | Unlimited                  |
-| Threaded Optimization            | Off                        |
 | <div align="center">**Other**</div> |                         |
 | Memory Allocation Policy         | `0x00000001` (...MODERATE_PRE_ALLOCATION) |
 | <div align="center">**Unknown**</div> |                       |
